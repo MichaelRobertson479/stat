@@ -28,11 +28,11 @@ int main() {
     printf("%ld MB\n",info.st_size / 1000000);
     printf("%ld GB\n",info.st_size / 1000000000);
 
-    printf("testing understanding of bitwise and: %o\nexpected: 4", 5 & 7);
-
     printf("ls -l format:\n");
 
     int size = 511 & info.st_size;
+
+    printf("size: %o\n",size);
 
     return 0;
 }
