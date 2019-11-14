@@ -31,15 +31,8 @@ int main() {
     printf("ls -l format:\n");
 
     int perm = info.st_mode;
-
     char str[9] = {'r','w','x','r','w','x','r','w','x'};
 
-    for (i = 0; i < 9; i++) {
-
-        printf("%c",str[i]);
-    }
-    printf("\n");
-    
     for (i = 0; i < 9; i++) {
 
         if (perm % 2 == 0) {
@@ -53,6 +46,8 @@ int main() {
 
         printf("%c",str[i]);
     }
+
+    printf(" 1 %s %s",info.st_uid,info.st_gid);
 
     return 0;
 }
