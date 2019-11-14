@@ -11,7 +11,7 @@ int main() {
 
     struct stat info;
 
-    int i = stat("file.txt",&info);
+    int i = stat("/dev/random",&info);
 
     if (i == -1) {
         printf("stat failed\n");
@@ -21,6 +21,8 @@ int main() {
     printf("file size: %ld\n",info.st_size);
     printf("mode: %o\n",info.st_mode);
     printf("time of last access: %s\n",ctime(&info.st_atime));
+
+    printf("\n")
 
     return 0;
 }
