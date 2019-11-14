@@ -19,7 +19,7 @@ int main() {
     }
 
     printf("file size: %ld\n",info.st_size);
-    printf("mode: %x\n",info.st_mode);
+    printf("mode: %o\n",info.st_mode);
     printf("time of last access: %s\n",ctime(&info.st_atime));
 
     return 0;
