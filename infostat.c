@@ -15,7 +15,7 @@ int main() {
 
     if (i == -1) {
         printf("stat failed\n");
-        printf("%s\n",strerro(errno));
+        printf("%s\n",strerror(errno));
     }
 
     printf("file size: %ld\n",info.st_size);
