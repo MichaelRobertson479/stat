@@ -22,7 +22,7 @@ int main() {
     printf("mode: %o\n",info.st_mode);
     printf("time of last access: %s\n",ctime(&info.st_atime));
 
-    printf("\n")
+    printf("\n");
 
     return 0;
 }
