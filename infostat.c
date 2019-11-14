@@ -34,22 +34,19 @@ int main() {
 
     //printf("permissions: %o\n",perm);
 
-    int permi = info.st_mode;
-
-    char perm[9] = {'r','w','x','r','w','x','r','w','x'};
+    int perm = info.st_mode;
 
     for (i = 0; i < 9; i++) {
 
-        if (permi % 2 == 0) {
-            perm[9-i] = '-';
+        if (perm % 2 == 0) {
+            printf("-");
         }
 
-        permi = permi / 2;
-    }
+        else {
+            printf("t");
+        }
 
-    for (i = 0; i < 9; i++) {
-
-        printf("%c",perm[i]);
+        perm = perm / 2;
     }
 
     return 0;
