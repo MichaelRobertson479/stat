@@ -30,9 +30,9 @@ int main() {
 
     printf("ls -l format:\n");
 
-    int size = 511 & info.st_size;
+    int perm = 511 & info.st_mode;
 
-    printf("size: %o\n",size);
+    printf("permissions: %o\n",perm);
 
     return 0;
 }
