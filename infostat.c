@@ -30,23 +30,28 @@ int main() {
 
     printf("ls -l format:\n");
 
-    //int perm = 511 & info.st_mode;
-
-    //printf("permissions: %o\n",perm);
-
     int perm = info.st_mode;
+
+    char str[9] = {'r','w','x','r','w','x','r','w','x'};
 
     for (i = 0; i < 9; i++) {
 
-        if (perm % 2 == 0) {
-            printf("-");
-        }
+        printf("%c",str[i]);
+    }
+    printf("\n");
+    
+    for (i = 0; i < 9; i++) {
 
-        else {
-            printf("t");
+        if (perm % 2 == 0) {
+            str[8-i] = '-';
         }
 
         perm = perm / 2;
+    }
+
+    for (i = 0; i < 9; i++) {
+
+        printf("%c",str[i]);
     }
 
     return 0;
