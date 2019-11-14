@@ -47,7 +47,5 @@ int main() {
         printf("%c",str[i]);
     }
 
-    printf(" 1 %d %d",info.st_uid,info.st_gid);
-
     return 0;
 }
