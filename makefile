@@ -10,3 +10,4 @@ run:
 clean:
 	rm *.o
 	rm infostat
+	rm stat
